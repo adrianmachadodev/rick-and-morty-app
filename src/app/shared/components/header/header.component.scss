@@ -1,17 +1,17 @@
 .header {
-  background-color: aquamarine;
+  background-color: red;
   height: 3rem;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: space-between;
   justify-content: center;
+  align-content: space-between;
 }
 
 .header .logo {
-  background-color: cadetblue;
-  width: 5rem;
+  background-color: aquamarine;
   height: 2rem;
+  width: 4rem;
 }
 
 .header .nav {
@@ -19,17 +19,21 @@
   width: 30rem;
   height: 2rem;
   display: flex;
+  align-items: center;
   justify-content: center;
-  flex-direction: column;
 }
 
 ul {
+  width: 20rem;
   display: table;
-  background-color: antiquewhite;
+  background-color: crimson;
 }
 
-li {
-  background-color: aqua;
-  margin-left: 2px;
+ul li {
   display: table-cell;
+}
+
+li a {
+  background-color: darkorchid;
+  margin: 1px auto;
 }

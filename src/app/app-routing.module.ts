@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'characters',
     component: CharactersComponent,
   },
+  {
+    path: '**',
+    redirectTo: 'characters',
+  },
 ];
 
 @NgModule({
