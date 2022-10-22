@@ -7,9 +7,10 @@ import { CharactersComponent } from './characters/characters.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '@shared/shared.module';
+import { SearchComponent } from './characters/components/search/search.component';
 
 @NgModule({
-  declarations: [AppComponent, CharactersComponent],
+  declarations: [AppComponent, CharactersComponent, SearchComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

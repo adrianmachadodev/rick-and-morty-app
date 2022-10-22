@@ -6,4 +6,8 @@ export interface Characters {
   type: string;
   gender: string;
   image: string;
+  location: {
+    name: string;
+    url: string;
+  };
 }

@@ -3,21 +3,22 @@
     <div class="card-img">
       <img [src]="charac.image" alt="" />
     </div>
+
     <div class="section-name">
-      {{ charac.name }}
-    </div>
-    <div class="section-info">
-      <div class="info">
+      <div class="name-title">
         {{ charac.name }}
       </div>
-      <div class="info">
-        {{ charac.gender }}
-      </div>
-      <div class="info">
+      <div class="type-title">
         {{ charac.species }}
       </div>
-      <div class="info">
-        {{ charac.id }}
+    </div>
+
+    <div class="section-info">
+      <div class="info-status">
+        {{ charac.status }}
+      </div>
+      <div class="info-gender">
+        {{ charac.gender }}
       </div>
     </div>
   </div>
