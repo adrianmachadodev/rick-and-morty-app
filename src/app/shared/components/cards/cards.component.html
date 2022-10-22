@@ -1,1 +1,24 @@
-<p>cards works!</p>
+<div class="wrapper">
+  <div class="cards" *ngFor="let charac of data">
+    <div class="card-img">
+      <img [src]="charac.image" alt="" />
+    </div>
+    <div class="section-name">
+      {{ charac.name }}
+    </div>
+    <div class="section-info">
+      <div class="info">
+        {{ charac.name }}
+      </div>
+      <div class="info">
+        {{ charac.gender }}
+      </div>
+      <div class="info">
+        {{ charac.species }}
+      </div>
+      <div class="info">
+        {{ charac.id }}
+      </div>
+    </div>
+  </div>
+</div>

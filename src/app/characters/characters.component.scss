@@ -1,16 +1,22 @@
 .wrapper {
-  background-color: darkgoldenrod;
-  height: 100vh;
+  // background-color: darkgoldenrod;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
-.title {
-  background-color: blueviolet;
+.wrapper .title {
+  background-color: brown;
   height: 3rem;
+  justify-items: center;
+  text-align: center;
 }
 
-.section-cards {
-  background-color: turquoise;
-  height: 30rem;
+.wrapper .section-cards {
+  // background-color: antiquewhite;
+  height: auto;
+  display: flex;
+  flex-direction: column;
 }

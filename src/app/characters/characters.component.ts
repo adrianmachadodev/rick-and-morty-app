@@ -8,12 +8,16 @@ import { Characters } from '../core/characters.model';
   styleUrls: ['./characters.component.scss'],
 })
 export class CharactersComponent implements OnInit {
-  characters: Characters[] = [];
+  characters: Array<Characters> = [];
   constructor(private characterService: CharactersService) {}
 
   ngOnInit(): void {
+    this.getServiceCharacters();
+  }
+
+  getServiceCharacters() {
     this.characterService.getCharacter().subscribe((data: any) => {
-      this.characters = data;
+      this.characters = data.results;
       console.log(this.characters);
     });
   }
