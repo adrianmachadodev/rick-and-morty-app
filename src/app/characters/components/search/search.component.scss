@@ -1,11 +1,41 @@
 .wrapper-search {
-  background-color: burlywood;
-  height: 3rem;
+  // background-color: burlywood;
+  height: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
 }
 
 .wrapper-search input {
-  width: 20%;
+  display: block;
+  background: transparent;
+  font-size: 1.3em;
+  height: 2rem;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid grey;
+}
+
+.wrapper-search label {
+  position: absolute;
+  top: 0;
+  color: black;
+  font-weight: 100;
+  pointer-events: none;
+  font-size: 16px;
+  transform: translateY(9px);
+  transition: all 200ms ease-in-out;
+}
+
+.wrapper-search input:focus,
+.wrapper-search input:valid {
+  border-bottom-color: black;
+}
+
+.wrapper-search input:focus + label,
+.wrapper-search input:valid ~ label {
+  color: grey;
+  font-size: 13px;
+  transform: translateY(-15px);
 }
