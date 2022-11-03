@@ -1,4 +1,10 @@
 <div class="wrapper-search">
-  <input [(ngModel)]="nameCharac" type="text" required />
+  <input
+    #inputSearch
+    [(ngModel)]="nameCharac"
+    type="text"
+    (keyup)="onSearch(inputSearch.value)"
+    required
+  />
   <label>Search Character</label>
 </div>
