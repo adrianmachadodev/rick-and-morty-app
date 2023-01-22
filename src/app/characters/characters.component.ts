@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable, Observer, of, Subscription } from 'rxjs';
 import { CharactersService } from '../character/characters.service';
 import { Characters } from '../core/characters.model';
+import { SearchService } from './service/search.service';
 
 @Component({
   selector: 'app-characters',
@@ -9,7 +11,11 @@ import { Characters } from '../core/characters.model';
 })
 export class CharactersComponent implements OnInit {
   characters: Array<Characters> = [];
-  constructor(private characterService: CharactersService) {}
+  FilterCharac: Observable<any> = of([]);
+  constructor(
+    private characterService: CharactersService,
+    private searchService: SearchService
+  ) {}
 
   ngOnInit(): void {
     this.getServiceCharacters();
@@ -20,5 +26,11 @@ export class CharactersComponent implements OnInit {
       this.characters = data.results;
       console.log(this.characters);
     });
+  }
+
+  receiveData(event: string): void {
+    console.log('hola pa', event);
+
+    this.FilterCharac = this.searchService.searchCharacter$(event);
   }
 }

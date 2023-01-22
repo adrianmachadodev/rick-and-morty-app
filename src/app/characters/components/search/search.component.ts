@@ -15,16 +15,10 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  emitDataCharacter() {
-    this.sendName = this.nameCharac;
-    this.emitCharacter.emit(this.sendName);
-  }
-
   onSearch(value: string) {
-    console.log(value);
-
-    if (value && value.length > 3) {
-      this.router.navigate(['/characters'], { queryParams: { q: value } });
+    if (value && value.length >= 3) {
+      this.emitCharacter.emit(value);
+      console.log(value);
     }
   }
 }

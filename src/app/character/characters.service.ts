@@ -13,10 +13,4 @@ export class CharactersService {
   getCharacter() {
     return this.http.get('https://rickandmortyapi.com/api/character');
   }
-
-  searchCharacters(query = '') {
-    return this.http.get<Characters[]>(
-      `https://rickandmortyapi.com/api/character/?name=${query}`
-    );
-  }
 }

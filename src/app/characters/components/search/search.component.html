@@ -1,9 +1,8 @@
 <div class="wrapper-search">
   <input
-    #inputSearch
+    (ngModelChange)="onSearch($event)"
     [(ngModel)]="nameCharac"
     type="text"
-    (keyup)="onSearch(inputSearch.value)"
     required
   />
   <label>Search Character</label>
