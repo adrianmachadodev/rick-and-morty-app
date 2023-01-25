@@ -1,5 +1,5 @@
 .header {
-  background-color: red;
+  // background-color: red;
   height: 3rem;
   display: flex;
   flex-direction: column;
@@ -9,13 +9,13 @@
 }
 
 .header .logo {
-  background-color: aquamarine;
+  // background-color: aquamarine;
   height: 2rem;
   width: 4rem;
 }
 
 .header .nav {
-  background-color: brown;
+  // background-color: brown;
   width: 30rem;
   height: 2rem;
   display: flex;
@@ -26,7 +26,7 @@
 ul {
   width: 20rem;
   display: table;
-  background-color: crimson;
+  // background-color: crimson;
 }
 
 ul li {
@@ -34,6 +34,6 @@ ul li {
 }
 
 li a {
-  background-color: darkorchid;
+  // background-color: darkorchid;
   margin: 1px auto;
 }
