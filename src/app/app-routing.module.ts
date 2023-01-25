@@ -8,6 +8,13 @@ const routes: Routes = [
     component: CharactersComponent,
   },
   {
+    path: 'characters-list',
+    loadChildren: () =>
+      import('./charac-list/charac-list.module').then(
+        (m) => m.CharacListModule
+      ),
+  },
+  {
     path: '**',
     redirectTo: 'characters',
   },

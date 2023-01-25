@@ -27,10 +27,4 @@ export class CharactersComponent implements OnInit {
       console.log(this.characters);
     });
   }
-
-  receiveData(event: string): void {
-    console.log('hola pa', event);
-
-    this.FilterCharac = this.searchService.searchCharacter$(event);
-  }
 }

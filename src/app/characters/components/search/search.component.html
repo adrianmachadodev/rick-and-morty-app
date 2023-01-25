@@ -1,7 +1,8 @@
 <div class="wrapper-search">
   <input
-    (ngModelChange)="onSearch($event)"
-    [(ngModel)]="nameCharac"
+    #inputSearch
+    autofocus
+    (keyup)="onSearch(inputSearch.value)"
     type="text"
     required
   />

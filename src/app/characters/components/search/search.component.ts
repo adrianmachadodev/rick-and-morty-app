@@ -1,3 +1,4 @@
+import { query } from '@angular/animations';
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -16,9 +17,8 @@ export class SearchComponent implements OnInit {
   ngOnInit(): void {}
 
   onSearch(value: string) {
-    if (value && value.length >= 3) {
-      this.emitCharacter.emit(value);
-      console.log(value);
+    if (value && value.length > 3) {
+      this.router.navigate(['/characters-list'], { queryParams: { q: value } });
     }
   }
 }
